@@ -1,7 +1,12 @@
 from django.contrib import admin
+from .models import menu , order  
 
-# Register your models here.
-from django.contrib import admin
-from .models import UserProfile
+class  MenuAdmin(admin.ModelAdmin):
+    list_display = ('name','price','category','is_available')
 
-admin.site.Register(UserProfile)
+class OrderAdmin(admin.ModelAdmin):
+    list_display = ('customer_name','menu_item','quantity','order_date','status',)
+
+
+admin.site.register(Menu,MenuAdmin)
+admin.site.register(Order,OrderAdmin)
