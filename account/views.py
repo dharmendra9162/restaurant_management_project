@@ -16,3 +16,13 @@ def get_menu(request):
         }
     ]
     return response(menu)
+
+
+from django.conf import settings
+from django.shortcuts import render
+
+
+def home (request):
+    restaurant_name = getattr(settings,"RESTAURANT_NAME","my Restaurant")
+    return render(request,"home.html",{"restaurant_name": restaurant_name})
+    
