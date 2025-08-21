@@ -25,4 +25,54 @@
 <body>
     <h1>Welcome to{{restaurant_name}}</h1>
 </body>
-</html>    
+</html>   
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0>"
+    <title>{{ restaurant_name}}</title>
+    <!-- Bootstrap CSS -->
+    <link herf="https://cdn.jsdelivr.net/npm/Bootstrap@5.3/dist/css/Bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        backgroud_color:#fafafa;
+        font-family: 'segoe UI',Tahoma, Geneva, Verdan, serdan, sans_serif;
+        }
+        header {
+            backgroud_color: linear-gradient(90deg,#ff7e5f,#feb47b);
+            padding: 2rem;
+            color: white;
+            text-radius: center;
+            border-radius: 0 0 20px 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight:bold;
+        }
+        .Welcome-card{
+            margin: 2rem auto;
+            max-width: 600px;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow:0 6px 15px rgba(0,0,0,0.1);
+            bckground: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ restaurant_name}}</h1>
+        <p>Welcome to our restaurant homepage</p>
+    </header>
+    <div class="container">
+        <div class="Welcome-card"
+        <h2> Delicious food ,cozy atmosphere </h2>
+        <p>We serve fresh meals made with love.Explore our menu and enjoy the tast!</p>
+        <a href="#" class="btn btn-primary">View Menu</a>
+    </div>
+</div>
+</body>
+</html>
