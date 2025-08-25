@@ -57,3 +57,16 @@ def home_view(request):
 
     def contact_view(request):
         return render(request,'contact .html')
+from  django.shortcuts import render
+
+def menu_view(request):
+    #Hardcoded list of menu items(later replace with DB)
+    menu_items = [
+        {"name": "paner Butter Masala","price": 250,"category": "Main Course"},
+        {"name": "Veg Biryani", "Price": 200, "Category": "Rice"},
+        {"name": "Tandoori Roti","price":25, "category":"Bread"},
+        {"name": "Gulab Jamun", "price":80, "category": "Dessert"},
+
+    ]
+
+    return render(request, "menu.html", {"menu_items": menu_items})
