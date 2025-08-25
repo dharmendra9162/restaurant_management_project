@@ -39,3 +39,16 @@ def home_view(request)
             'phone_number': settings.RESTAURANT_PHONE
         }
     )
+ from django.shortcuts import render
+ from .models import RestaurantInfo
+
+def home_view(request):
+    restaurant = RestaurantInfo.objects.first()
+    return render(
+        request,
+        'home.html',
+        {
+            'restaurant_name': restaurant_name if restaurant else "our Restaurant",
+            'phon_number': restaurent.phone if restaurant else "N/A"
+        }
+    )    
