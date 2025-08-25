@@ -52,3 +52,8 @@ def home_view(request):
             'phon_number': restaurent.phone if restaurant else "N/A"
         }
     )    
+
+    from django.shortcuts import render
+
+    def contact_view(request):
+        return render(request,'contact .html')
