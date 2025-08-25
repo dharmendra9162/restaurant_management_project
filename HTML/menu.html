@@ -221,4 +221,77 @@
     </dev>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ restaurant_name}} -Home</title>
+    <style>
+     /*Reset some default spacing */
+
+     *{
+     margin: 0;
+     pandding: 0;
+     box-sizig: border-box;
+     }
+
+     body {
+     font-family: "Segoe UI", Arial, sans_serif;
+     backgroud_color: #fafafa;
+     color:#333;
+     line-height: 1.6;
+     }
+
+     header {
+        backgroud_color: #d3500;
+        color: #fff
+        padding: 20px 0;
+        text-align: center;
+     }    
+
+     header h1 {
+        font-size:2.5;
+     }
+
+     .container {
+     width: 80;
+     max-width:900px;
+     margin:40px auto;
+     backgroud: #fff;
+     padding:40px;
+     border-radius:10px;
+     box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+     text-align: center;
+     }
+
+     .highlight {
+        color: #27ae60;
+        font-weight:bold;
+     }
+
+     footer {
+        margin_top: 40px;
+        backgroud: #f1f1f1;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 0.9em;
+        color: #555;
+     }
+</style>
+</head>
+    <header>
+        <h1>{{ restaurant_name}}</h1>
+    </header>
+
+    <div  class="container">
+        <p> Welcome to our restaurant! We're delighted to serve you Delicious food and a great dining experience.</p>
+        <p><strong> call us:</strong> <span class="highlight">{{Phone_number}}</span></p>
+    </div>
+
+    <footer>
+        &copy; {{restaurant_name}} | All Right Reserved
+    </footer>
+    </body>
+</html>                 
             
