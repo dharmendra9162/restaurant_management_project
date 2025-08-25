@@ -26,3 +26,16 @@ def home (request):
     restaurant_name = getattr(settings,"RESTAURANT_NAME","my Restaurant")
     return render(request,"home.html",{"restaurant_name": restaurant_name})
     
+
+from django.conf import settings
+from django.shortcuts import render
+
+def home_view(request)
+    return render(
+        request,
+        'home.html',
+        {
+            'restaurant_name': 'Spice Garden',
+            'phone_number': settings.RESTAURANT_PHONE
+        }
+    )
