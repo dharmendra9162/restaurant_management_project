@@ -30,4 +30,18 @@
 <from method="get" action="">
     <input type="text" name="q" placeholder="search menu items..."
     <button type="submit">search</button>
-</from>    
+</from>   
+
+<h1> Our Menu </h1>
+{% if error %}
+    <p style="color:red;">{{error}}</p>
+{% endif %}
+
+<ul>
+{% for iteam in menu_items %}
+ <li>{{ iteam.name }} - ${{ item.price }}  ({{ item.categry }})   
+{% empty %}
+ <li>No menu items available.</li>
+ {% end for %}
+ </ul>
+
