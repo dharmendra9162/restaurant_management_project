@@ -79,3 +79,19 @@ def menu_view(request):
             "restaurant_name": "Spice Garden",
             "year": datetime.now().year
         })
+
+def menu_view(request)
+    try:
+        # Later this will fetch from the database
+        menu_items = [
+            {"name": "panner Butter masala", "price":250, "category": "Main Course"},
+            {"name": " Veg Biryani", "price":200, "category": "Rice"},
+            {"name": "Tandoori Roti", "price":25, "category": "Bread"}
+        ]
+    except DatabaseError:
+        # Handle DB error gracefully
+        menu_items = []
+        error_message = "sorry, We're having trouble loading  the menu right now."
+        return render(request, "menu.html", {"menu_items": menu_items, "error": error_message})
+
+    return render(request, "menu.html",{"menu_iteam"})                
