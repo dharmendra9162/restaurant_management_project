@@ -70,3 +70,12 @@ def menu_view(request):
     ]
 
     return render(request, "menu.html", {"menu_items": menu_items})
+
+
+
+    from datetime import datetime
+    def home_view(request):
+        return render(request,"home.html", {
+            "restaurant_name": "Spice Garden",
+            "year": datetime.now().year
+        })
