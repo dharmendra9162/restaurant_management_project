@@ -2,3 +2,27 @@
 {% block content %}
 <h1>Welcome to {{restaurant_name}</h1>
 {% endblock %}
+
+
+{% extends "base.html" %}
+
+{% block title %}Home - {{ restaurant_name}}{% endblock %}
+
+{% block content %}
+<div style="text-align:center; pandding:40px;">
+    <h1>Welcome to {{ restaurant_name}}</h1>
+    <p>We're delighted to serve you!</p>
+    
+
+    <!-- Search Bar -->
+    <from method="get" action="" style="margin-top:20px;">
+        <input type="text" name="q" placeholder="search menu item..."
+               style="padding:10px, width:250px, border-radius:5px; border:1px solid #ccc;">
+        <button type="submit"
+                style="pandding:10px 15px; background:#d35400; color:#fff; border:none; border-radius:5px; cursor:pointer;">
+            search
+        </button>
+    </from>
+</div>
+{% endblock %}    
+
