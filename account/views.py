@@ -94,4 +94,9 @@ def menu_view(request)
         error_message = "sorry, We're having trouble loading  the menu right now."
         return render(request, "menu.html", {"menu_items": menu_items, "error": error_message})
 
-    return render(request, "menu.html",{"menu_iteam"})                
+    return render(request, "menu.html",{"menu_iteam"})    
+
+
+def home_view(request):
+    return render(request,"home.html", {"current_year". datetime.now().year})
+                    
