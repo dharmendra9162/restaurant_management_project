@@ -121,4 +121,78 @@
     <footer>
         <p>&copy; {{ current_year}} our Restaurant.All rights reserved.</p>
     </footer>
-</body></html>                
+</body>
+</html> 
+
+{% load static %}
+<!DOCTYYPE html>
+<html  lang="en">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Our Restaurant</title>
+    <style>
+        body {
+        font-family: 'Sagoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fafafa;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        }
+
+        header {
+        background-color: #d35400;
+        color: white;
+        text-align: 30px;
+        padding: 30px;
+        }
+        
+        header img {
+        max-width: 180px;  /* logo size */
+        display: block;
+        margin: 0 auto 15px auto;  /* center +spacing */
+        }
+        main {
+        text-align: center;
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 800px;
+        }
+
+        h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        }
+
+        p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #555;
+        }
+
+        footer {
+        background-color: #333;
+        color: white;
+        text-align:center;
+        pandding: 15 px 0;
+        margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Restaurant Logo -->
+        <img src="{%static 'images/logo.png' %}" alt="Restaurant Logo">
+        <h1>Our Restaurant</h1>
+    </header>
+
+    <main>
+        <h2>Welcome!</h2>
+        <p>WE're happy to serve you delicious food every day.</p>
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} Our Restaurant. all rights reserved.</p>
+    </footer>
+</body>
+</html>                
+
