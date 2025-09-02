@@ -294,4 +294,13 @@
     </footer>
     </body>
 </html>                 
-            
+
+
+<h1> Our Menu</h1>
+<ul>
+    {% for item in item %}
+        <li><strong>{{ item.name }}</strong> - {{ item.description}} (${{ item.price }})</li>
+    {% empty %}
+        <li> No items available.</li>
+    {% endfor %}
+</ul>        
