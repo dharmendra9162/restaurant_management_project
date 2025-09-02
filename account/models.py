@@ -19,3 +19,11 @@ class RestaurantInfo(models.Model):
 
     def __str__(self):
         return self.name
+
+class MenuItm(models.model):
+    name = model.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    price = models.decimalFiel(max_digits=6, decimal_place=2)
+
+    def __str__(self):
+        return self.name        
