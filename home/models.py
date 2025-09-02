@@ -28,3 +28,10 @@ class order(models.Model):
 
     def get_total_price(self):
         return self.quantity *self.menu_item.price    
+
+
+
+class MenuItem(models.Model):
+    name = models.CharField(max_lenght=100)
+    description = models.TextField(blank=True)
+    price  = models.DecimalField(max_digits=6, decimal_places=2)
