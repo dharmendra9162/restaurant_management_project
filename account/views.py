@@ -100,3 +100,10 @@ def menu_view(request)
 def home_view(request):
     return render(request,"home.html", {"current_year". datetime.now().year})
                     
+
+def home_view(request):
+    return render(request, "home.html", {
+        "restaurant_name": settings.RESTAURANT_NAME,
+        "current_year": datetime.now().year
+
+    })
