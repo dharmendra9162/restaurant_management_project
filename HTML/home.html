@@ -207,3 +207,10 @@
     width="100%" height="300" style="border:0;"
     allowfullscreen=""  loading="lazy">
 </iframe>
+
+<h2>contact Us</h2>
+<form method="post">
+    {% csef_token %}
+    {{ form.as_p}}
+    <button type="submit">submit</button>
+</form>
