@@ -26,4 +26,9 @@ class MenuItm(models.model):
     price = models.decimalFiel(max_digits=6, decimal_place=2)
 
     def __str__(self):
-        return self.name        
+        return self.name   
+
+
+class Contact(models.model):
+    name = models.CharField(max_length=100)
+    email = model.EmailField()             
