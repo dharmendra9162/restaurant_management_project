@@ -107,3 +107,15 @@ def home_view(request):
         "current_year": datetime.now().year
 
     })
+
+
+    def home(request):
+        if request.method == 'POST'
+        from = contactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+        else
+            form = contactForm()
+            return render(request,"home.html",{"form":form})
+            
