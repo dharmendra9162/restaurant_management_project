@@ -32,3 +32,11 @@ class MenuItm(models.model):
 class Contact(models.model):
     name = models.CharField(max_length=100)
     email = model.EmailField()             
+
+
+    class Restaurant(models.model):
+        name = models.CharField(max_length=100)
+        address = models.TextField()
+
+        def __str__
+        return self.name
