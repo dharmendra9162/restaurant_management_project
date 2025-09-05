@@ -119,3 +119,6 @@ def home_view(request):
             form = contactForm()
             return render(request,"home.html",{"form":form})
             
+    def home(request):
+        restaurent = Restaurant.objects.first()
+        return render(request,'home.html',{'restaurant': restaurent})            
