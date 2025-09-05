@@ -224,4 +224,8 @@
     <h1>Welcome to {{ restaurant_name}}</h1>
     <p><strong>Address:</strong> {{ restaurant_address }}</p>
 </body>
-</html>            
+</html>   
+
+{% IF iteam.imag %}
+    <img scr="{{ item.image.url }}" alt="{{ item.name }}">
+{% endif %}    
