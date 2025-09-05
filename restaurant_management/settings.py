@@ -132,3 +132,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
  RESTAURANT_PHONE = "+ 91 9162606428"
 
  RESTAURANT_NAME = "Our Restaurant"
+
+ MEDIA = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
