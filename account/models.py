@@ -40,3 +40,11 @@ class Contact(models.model):
 
         def __str__
         return self.name
+from django.db import models
+class ContactSubmission(model.models)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    submitted_at = models.DateTimeField(auto_now_add=Truee)
+
+    def __str__(self):
+        return f"{self.name} - {self.email}"        
