@@ -57,3 +57,15 @@ class ContactFrom(forms.ModelForm):
     class Meta:
         model = ContactSubmission
         fields = ['name', 'email']
+
+
+from django.db import models
+
+class RestaurantLocation(models.model):
+    address = models.CharField(max_length=225)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    zip_code =models.CharField(max_length=20)
+
+    def __str__(self):
+        ret f"{self.addres}, {self.city}, {self.sate} {self.zip_code}"
