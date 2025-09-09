@@ -47,4 +47,13 @@ class ContactSubmission(model.models)
     submitted_at = models.DateTimeField(auto_now_add=Truee)
 
     def __str__(self):
-        return f"{self.name} - {self.email}"        
+        return f"{self.name} - {self.email}"  
+
+
+from django import froms
+from .model import ContactSubmission
+
+class ContactFrom(forms.ModelForm):
+    class Meta:
+        model = ContactSubmission
+        fields = ['name', 'email']
