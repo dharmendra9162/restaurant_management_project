@@ -15,3 +15,10 @@ urlpatterns=[
 
 
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+from django.urls imort path
+from . import views
+
+urlpatterns = [
+    path('contact/',view.contact_view, name='contact')
+]
