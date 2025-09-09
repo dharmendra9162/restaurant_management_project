@@ -127,3 +127,17 @@ def home_view(request):
     def menu_view(request):
         menu_iteam = MenuItems.objects.all()
         return render(request, 'menu.html', {'menu_items': menu_iteam})
+
+
+from django.shortcuts import render, redirect
+from.forms import contactForm
+
+def contact_view(request):
+    if request.method == "POST":
+        from = contactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contat')
+    else:
+        form = contactForm()
+    return render(request, 'contact.html', {'form': form})            
