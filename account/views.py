@@ -122,3 +122,8 @@ def home_view(request):
     def home(request):
         restaurent = Restaurant.objects.first()
         return render(request,'home.html',{'restaurant': restaurent})            
+
+
+    def menu_view(request):
+        menu_iteam = MenuItems.objects.all()
+        return render(request, 'menu.html', {'menu_items': menu_iteam})
