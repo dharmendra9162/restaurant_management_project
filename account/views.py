@@ -152,3 +152,25 @@ def home_view(request):
 else:
     menu_items = MenuItems.objects.all()
     return render(request, 'home.html', {'menu_items': menu_iteam, 'query':query})        
+
+
+from django.shortcuts import render
+from django .core.mail import send_mail
+from django.conf.import settings
+from.form import contactForm
+
+def contact_view(request):
+    if request.method=="POST":
+        form = contactForm(request.POST)
+        if form.is_valid():
+            send_mail(
+                f"Message from {form.cleaned_data['name]},
+                form.cleaned_data['message'],
+                form.cleaned_data['email'],
+                [settings.EMAIL_HOST_USER]
+            )
+            return render(request, "contact.html", {"form": form, "success": True})
+
+    else:
+        form = contactForm()
+        return render(request,"contact.html",{"form: form})
