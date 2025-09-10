@@ -228,4 +228,22 @@
 
 {% IF iteam.imag %}
     <img scr="{{ item.image.url }}" alt="{{ item.name }}">
-{% endif %}    
+{% endif %}  
+
+
+<!-- templates /home.html -->
+<h1> Welcome to our Restaurant</h1>
+
+<form method="get" action="">
+    <input type="text" name="q" placeholder="search ,menu..." value="{{ query">
+    <button type="submit">search</button>
+</form>
+
+<h2> Menu</h2>
+<ul>
+    {% for iteam in menu_items %}
+        <li>{{ iteam.name }} -{{ iteam.description }} - ₹{{ item.price}}</li>
+    {% empty %}
+        <li> No iteam found.</li>
+    {% endfor %}
+            
