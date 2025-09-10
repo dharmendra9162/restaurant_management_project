@@ -101,4 +101,11 @@
     {% crrf_token %}
     {{ form.as_p }}
     <button type="submit">submit</button>
-</form>    
+</form>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">send</button>
+</form>
+{% if success %}<p>Message sent!</p>{% endif %}    
