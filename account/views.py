@@ -141,3 +141,14 @@ def contact_view(request):
     else:
         form = contactForm()
     return render(request, 'contact.html', {'form': form})            
+
+form django.shortcuts import render
+from .models import MenuItems
+
+def home_view(request):
+    query = request.GET('q', '')
+    if query:
+        menu_items = MenuItems.objects.filter(name__icotains=query)
+else:
+    menu_items = MenuItems.objects.all()
+    return render(request, 'home.html', {'menu_items': menu_iteam, 'query':query})        
