@@ -22,3 +22,10 @@ from . import views
 urlpatterns = [
     path('contact/',view.contact_view, name='contact')
 ]
+
+from django.urls imort path
+from . import views
+
+urlpatterns =[
+    path('',views.home, name='home'),
+]
