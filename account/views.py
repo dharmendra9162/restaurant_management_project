@@ -174,3 +174,11 @@ def contact_view(request):
     else:
         form = contactForm()
         return render(request,"contact.html",{"form: form})
+
+
+from django.shortcuts import render
+from .models import Restaurant
+
+def home(request):
+restaurant = Restaurant.objects.first()
+return render(request, "home.html", {"restaurent": restaurant})
