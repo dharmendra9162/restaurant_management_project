@@ -247,3 +247,13 @@
         <li> No iteam found.</li>
     {% endfor %}
             
+
+<h1>{{ restaurant_name}}</h1>
+<p>{{ restaurant_address }}</p>
+<h2>  Opening Hours</h2>
+<ul>
+    {% for day ,Hours in restaurant.Opening_hour.items %}
+        <li><strong>{{ day }}:</strong> {{ Hours}}</li>
+    {% endfor %}
+</ul>        
+
