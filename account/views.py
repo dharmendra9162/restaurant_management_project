@@ -182,3 +182,13 @@ from .models import Restaurant
 def home(request):
 restaurant = Restaurant.objects.first()
 return render(request, "home.html", {"restaurent": restaurant})
+
+from django.shortcuts import render
+from .models import Restaurant
+
+def home(request):
+    restaurent = Restaurant.objects.first()
+    return render(request,"home.html", {"restaurent":restaurant})
+
+
+ 
