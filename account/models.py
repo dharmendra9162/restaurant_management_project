@@ -69,3 +69,13 @@ class RestaurantLocation(models.model):
 
     def __str__(self):
         ret f"{self.addres}, {self.city}, {self.sate} {self.zip_code}"
+
+from django.db import model
+
+class Restaurant(models.model):
+    name = models.CharField(max_length=200)
+    addres = models.TextField()
+
+    def __str__(self):
+        return self.name
+         
