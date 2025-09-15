@@ -226,3 +226,7 @@ def add_to_cart(request, item_id):
         cart_count = sum(cart.values())
         return render(request, "home.html",{"cart_count: cart_count"})
  
+ from django.shortcuts import render
+
+ def about (request):
+    return render(request, "about.html")
