@@ -109,3 +109,18 @@
     <button type="submit">send</button>
 </form>
 {% if success %}<p>Message sent!</p>{% endif %}    
+
+from django import forms
+
+class contactForm(forms.form):
+name = Form.charField(max_length=100, required=True)
+email = form.EmailField(required=True)
+message = Forms.charField(
+    width=forms.textarea,
+    required=True,
+    min_lenght=10,
+    error_messages={
+        'required': 'please enter email contact'
+        'min_lenght': 'message must be at least 10 characters longs.'
+    }
+)
