@@ -190,5 +190,28 @@ def home(request):
     restaurent = Restaurant.objects.first()
     return render(request,"home.html", {"restaurent":restaurant})
 
+from django.shortcuts import render
+from django.core.mail import send_mail
+from django.conf import settings
+from .forms import contactForm
+
+def contact_view(request):
+    success = False
+    if request.method == "POST"
+    if form.is_valid():
+        # Data is alredy validated
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['message']
+
+        subject = f"New contact Message from {name}"
+        body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+
+        send_mail(subject,body,settings.DEFAULT_FORM_EMAIL,[settings.EMAIL_HOST_USER])
+    else:
+        from = contactForm()
+        return render(request,"contact.html",{"form": form , "success": success})
+                
+
 
  
