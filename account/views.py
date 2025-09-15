@@ -212,6 +212,17 @@ def contact_view(request):
         from = contactForm()
         return render(request,"contact.html",{"form": form , "success": success})
                 
+from django.shortcuts import redirect
 
+def add_to_cart(request, item_id):
+    cart  = request.session.get("cart", {})
+    cart[item_id] = cart.get(item_id, 0) +1
+    request.session["cart"] = cart
+    return redirect("home")
+    from django.shortcuts import render
 
+    def home(request):
+        cart = request.session.get("cart", {})
+        cart_count = sum(cart.values())
+        return render(request, "home.html",{"cart_count: cart_count"})
  
