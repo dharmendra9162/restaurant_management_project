@@ -78,4 +78,13 @@ class Restaurant(models.model):
 
     def __str__(self):
         return self.name
-         
+
+from django.db import models
+
+class Restaurant(models.model):
+    name = models.CharField(max_length=200)
+    addres = models.TextField()
+    logo = models.ImageField("resto-restaurant-logo/", blank=True, null=True)
+
+    def__str__(self):
+        return self.name         
