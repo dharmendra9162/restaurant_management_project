@@ -107,3 +107,13 @@ class MenuCategory(models.model):
 
  def __str__(self):
     return self.name       
+
+from django.db import models
+from .models import orderstatus
+
+class order(models.model):
+
+    status = models.Foreignkey(orderstatus, on_delete=models..SET_NULL, null=True)
+
+def __str__(self):
+    return f"Order #{self.id} - {self.status.name if self.status else 'No Status}"
