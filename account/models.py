@@ -117,3 +117,12 @@ class order(models.model):
 
 def __str__(self):
     return f"Order #{self.id} - {self.status.name if self.status else 'No Status}"
+
+
+    from django.db import models
+
+    class orderstatus(models.model):
+        name = models.CharField(max_length=50, unique=True)
+
+        def__str__(self):
+            return self.name
