@@ -238,3 +238,11 @@ def add_to_cart(request, item_id):
     def home(request):
         restaurant = Restaurant.objects.first()
         return render(request, "home.html", {"restaurant"}):restaurant
+
+from rest_framework.generics import listAPIView
+from .models import MenuCategorySerializer
+from .serializers import MenuCategorySerializer
+
+class MenuCategoryListView(listAPIView):
+    queryset = MenuCategory.objects.all()
+    serializers_class = MenuCategorySerializer
