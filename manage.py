@@ -23,3 +23,14 @@ if __name__ == '__main__':
 
 python manage.py makemigrations home
 python manage.py migrate    
+
+
+from orders.utils import generate_coupon_code
+from orders.models import Coupon 
+
+# Generate a unique  Coupon Code
+code = generate_coupon_code(12)
+print(code)
+
+#save it 
+Coupon.objects.create(code=code, discount=15.00)
